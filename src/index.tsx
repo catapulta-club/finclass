@@ -1,22 +1,19 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import React from 'react';
+import { Text } from 'react-native';
+import { useTheme } from 'styled-components';
 
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <Text>Hello finclass</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import { Container } from './styles'
+
+const App: React.FC = () => {
+  const {typography} = useTheme()
+  return <Container>
+    <Text style={{
+      fontSize: 24,
+      fontFamily: typography.bold.fontFamily,
+      letterSpacing: typography.bold.letterSpacing
+    }}>Hello theme</Text>
+
+  </Container>;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
 
 export default App;

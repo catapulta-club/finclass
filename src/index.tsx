@@ -12,7 +12,6 @@ const App: React.FC = () => {
       fontFamily: typography.bold.fontFamily,
       letterSpacing: typography.bold.letterSpacing
     }}>Hello theme</Text>
-
   </Container>;
 };
 

@@ -2,6 +2,6 @@ import styled from "styled-components/native";
 import { ContainerProps } from "./types";
 
 export const Container = styled.View<ContainerProps>`
-    height: ${({h})=>h}px;
-    width: ${({w})=>w}px;
+    height: ${({h})=>h || 0}px;
+    width: ${({w})=>w || 0}px;
 `;

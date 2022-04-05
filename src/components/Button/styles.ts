@@ -11,7 +11,7 @@ export const Container = styled.Pressable<ContainerProps>`
     border-width: ${({ outlined }) => (outlined ? 1.5 : 0)}px;
     border-radius: ${({ theme }) => theme.borders.radius.sm}px;
     background-color: ${({ theme, color, outlined }) => {
-        if (outlined) return 'transparent'
+        if (outlined) return 'transparent';
         return color || theme.colors.primary.main;
     }} ;
 `;
@@ -20,6 +20,10 @@ export const Title = styled.Text<TitleProps>`
     font-size:12px ;
     letter-spacing: ${({ theme, type }) => theme.typography[type].letterSpacing}px;
     font-family: ${({ theme, type }) => theme.typography[type].fontFamily};
-    color: ${({ color }) => color}
+    color: ${({ color }) => color};
 
+`;
+
+export const SpacingIcon = styled.View`
+    width: 15px;
 `

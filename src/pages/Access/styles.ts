@@ -1,5 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import styled from "styled-components/native";
+import Text from "../../components/Text";
 
 export const Container = styled(SafeAreaView)`
   background-color: ${({ theme }) => theme.colors.background.main};
@@ -19,7 +20,7 @@ export const ImpactPhrase = styled(Text)`
   font-size: 22px;
 `;
 export const Banner = styled.Image.attrs({
-  resizeMode: contain,
+  resizeMode: "contain",
 })`
   width: 100%;
   height: 400px;

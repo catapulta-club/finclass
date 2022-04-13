@@ -8,13 +8,33 @@ import emailIcon from "../../../assets/icons/email.png";
 import { Banner, Container, Content, EmailIcon, ImpactPhrase } from "./styles";
 
 const Access: React.FC = () => {
+  const { colors } = useTheme();
+
+  const handleButtonLogin = () => {};
+
   return (
     <Container>
       <Banner resizeMode="contain" source={banner} />
       <Content>
         <ImpactPhrase type="bold">
-          {`Aprendaa a investir e\nconquiste sua liberdade\nfinanceira`}
+          {`Aprenda a investir e\nconquiste sua liberdade\nfinanceira`}
         </ImpactPhrase>
+        <Separator height={20} />
+        <Button title="Assine agora" textType="bold" />
+        <Separator height={20} />
+        <Button
+          outlined
+          title="Entrar com email"
+          textType="semiBold"
+          icon={
+            <EmailIcon
+              style={{ tintColor: colors.background.onMain }}
+              source={emailIcon}
+            />
+          }
+          onPress={handleButtonLogin}
+        />
+        <Separator height={45} />
       </Content>
     </Container>
   );

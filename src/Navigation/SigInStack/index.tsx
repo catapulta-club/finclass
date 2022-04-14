@@ -3,12 +3,15 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View } from "react-native";
 import Access from "../../pages/Access";
 
-// import {Container} from './styles'
 const Stack = createNativeStackNavigator();
 
 const SignInStack: React.FC = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      defaultScreenOptions={{
+        header: () => null,
+      }}
+    >
       <Stack.Screen name="access" component={Access} />
     </Stack.Navigator>
   );

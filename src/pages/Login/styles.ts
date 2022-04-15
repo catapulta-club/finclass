@@ -16,7 +16,7 @@ export const Header = styled.View`
   justify-content: space-between;
 `;
 
-export const OptionRightheader = styled.View`
+export const OptionRightHeader = styled.View`
   flex-direction: row;
 `;
 

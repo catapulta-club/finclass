@@ -1,7 +1,7 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { View } from "react-native";
 import Access from "../../pages/Access";
+import Login from "../../pages/Login";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +12,20 @@ const SignInStack: React.FC = () => {
         header: () => null,
       }}
     >
-      <Stack.Screen name="access" component={Access} />
+      <Stack.Screen
+        name="access"
+        component={Access}
+        options={{
+          header: () => null,
+        }}
+      />
+      <Stack.Screen
+        name="login"
+        component={Login}
+        options={{
+          header: () => null,
+        }}
+      />
     </Stack.Navigator>
   );
 };

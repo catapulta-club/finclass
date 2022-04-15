@@ -5,12 +5,14 @@ import Separator from "../../components/Separator";
 import banner from "../../../assets/images/banner/image.png";
 import { useTheme } from "styled-components";
 import emailIcon from "../../../assets/icons/email.png";
+import { useNavigation } from "@react-navigation/native";
 import { Banner, Container, Content, EmailIcon, ImpactPhrase } from "./styles";
 
 const Access: React.FC = () => {
   const { colors } = useTheme();
+  const navigation = useNavigation();
 
-  const handleButtonLogin = () => {};
+  const handleButtonLogin = () => navigation.navigate("login");
 
   return (
     <Container>

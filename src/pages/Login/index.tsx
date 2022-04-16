@@ -1,13 +1,14 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { Controller, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from "@hookforms/resolvers/yup";
 import BackButton from "../../components/BackButton";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import Separator from "../../components/Separator";
 import Text from "../../components/Text";
 import lock from "./../../../assets/icons/lock/icon.png";
+import { schemaLogin } from "./validations";
 import {
   Container,
   Content,
@@ -23,6 +24,7 @@ const Login: React.FC = () => {
     setValue,
     formState: { errors },
   } = useForm({
+    resolver: yupResolver(schemaLogin),
     defaultValues: {
       email: "",
       password: "",
@@ -36,15 +38,15 @@ const Login: React.FC = () => {
           <BackButton onPress={() => {}} />
           <OptionRightHeader>
             <Text size={13}>Recuperar Senha</Text>
-            <Separator width={10} />
+            <Separator height={10} />
             <LockIcon source={lock} />
           </OptionRightHeader>
         </Header>
-        <Separator width={30} />
+        <Separator height={30} />
         <Text size={22} type="bold">
           {"Acessar\nminha conta"}
         </Text>
-        <Separator width={35} />
+        <Separator height={35} />
         <Controller
           control={control}
           name="email"

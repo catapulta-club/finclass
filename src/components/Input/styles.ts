@@ -26,7 +26,7 @@ export const Label = styled(Text)`
   margin-bottom: 10px;
 `;
 
-export const error = styled(Text)`
+export const Error = styled(Text)`
   margin-top: 10px;
   padding: 0 15px;
   color: ${({ theme }) => theme.colors.error.main};

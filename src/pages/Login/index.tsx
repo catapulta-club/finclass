@@ -8,7 +8,7 @@ import Input from "../../components/Input";
 import Separator from "../../components/Separator";
 import Text from "../../components/Text";
 import lock from "./../../../assets/icons/lock/icon.png";
-import { schemaLogin } from "./validations";
+import { schemaLogin } from "./validation";
 import {
   Container,
   Content,
@@ -19,6 +19,7 @@ import {
 
 const Login: React.FC = () => {
   const navigation = useNavigation();
+
   const {
     control,
     handleSubmit,

@@ -9,6 +9,6 @@ export const schemaLogin = yup
     password: yup
       .string()
       .required("Senha obrigatória")
-      .trimEnd(6, "Pelo menos 6 caracteres"),
+      .min(6, "Pelo menos 6 caracteres"),
   })
   .required();

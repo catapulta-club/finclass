@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { useForm, Controller } from "react-hook-form";
-import { yupResolver } from "@hookforms/resolvers/yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import BackButton from "../../components/BackButton";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
@@ -18,6 +18,7 @@ import {
 } from "./styles";
 
 const Login: React.FC = () => {
+  const navigation = useNavigation();
   const {
     control,
     handleSubmit,
@@ -30,12 +31,22 @@ const Login: React.FC = () => {
       password: "",
     },
   });
+
+  const handleGoBack = () => navigation.goBack();
+
+  const onSubmit = async () => {
+    await handleSubmit(({ email, password }) => {
+      //TODO
+      console.log(email, password);
+    })();
+  };
+
   return (
     <Container>
       <Content>
         <Separator height={20} />
         <Header>
-          <BackButton onPress={() => {}} />
+          <BackButton onPress={handleGoBack} />
           <OptionRightHeader>
             <Text size={13}>Recuperar Senha</Text>
             <Separator height={10} />
@@ -62,7 +73,7 @@ const Login: React.FC = () => {
                 onChangeText={(text) => setValue("email", text)}
                 onBlur={onBlur}
                 value={value}
-                error={ErrorUtils.email?.message}
+                error={errors?.email?.message}
               />
             );
           }}
@@ -89,7 +100,7 @@ const Login: React.FC = () => {
           }}
         />
         <Separator height={55} />
-        <Button title="Entrar" onPress={() => {}} textType="semiBold" />
+        <Button title="Entrar" onPress={onSubmit} textType="semiBold" />
       </Content>
     </Container>
   );

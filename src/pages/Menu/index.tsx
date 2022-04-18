@@ -3,6 +3,7 @@ import { ScrollView } from "react-native";
 import { useTheme } from "styled-components";
 import Separator from "../../components/Separator";
 import Text from "../../components/Text";
+import useAuth from "../../hooks/useAuth";
 
 import Bitcoin from "../../../assets/icons/badge_ulrich.png";
 import editProfileIcon from "../../../assets/icons/edit-profile/edit-profile.png";
@@ -26,7 +27,7 @@ import {
 
 const Menu: React.FC = () => {
   const { colors } = useTheme();
-
+  const { logout } = useAuth();
   return (
     <Container>
       <ScrollView>
@@ -102,7 +103,7 @@ const Menu: React.FC = () => {
           icon={<IconTile source={termsIcon} />}
         />
         <Separator height={30} />
-        <Button textType="bold" outlined title="Sair" onPress={() => {}} />
+        <Button textType="bold" outlined title="Sair" onPress={logout} />
         <Separator height={30} />
         <Text size={11} type="bold" color={colors.placeholder.main}>
           Finclass 1.3.0

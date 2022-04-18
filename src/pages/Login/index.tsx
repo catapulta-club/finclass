@@ -9,6 +9,7 @@ import Separator from "../../components/Separator";
 import Text from "../../components/Text";
 import lock from "./../../../assets/icons/lock/icon.png";
 import { schemaLogin } from "./validation";
+import useAuth from "../../hooks/useAuth";
 import {
   Container,
   Content,
@@ -19,7 +20,7 @@ import {
 
 const Login: React.FC = () => {
   const navigation = useNavigation();
-
+  const { login } = useAuth();
   const {
     control,
     handleSubmit,
@@ -37,7 +38,7 @@ const Login: React.FC = () => {
 
   const onSubmit = async () => {
     await handleSubmit(({ email, password }) => {
-      //TODO
+      login();
       console.log(email, password);
     })();
   };

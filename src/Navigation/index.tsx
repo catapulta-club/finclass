@@ -1,10 +1,11 @@
 import React from "react";
-import { View } from "react-native";
+import useAuth from "../hooks/useAuth";
 import SignInStack from "./SigInStack";
 import SignedInBottomTab from "./SignedInBottomTab";
 
 const Navigation: React.FC = () => {
-  return <SignedInBottomTab />;
+  const { isLogged } = useAuth();
+  return isLogged ? <SignedInBottomTab /> : <SignInStack />;
 };
 
 export default Navigation;

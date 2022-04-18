@@ -7,7 +7,10 @@ import boxsearch from "../../../assets/icons/boxsearch.png";
 import boxmenu from "../../../assets/icons/boxmenu.png";
 import Text from "../../components/Text";
 
-import Access from "../../pages/Access";
+import Home from "../../pages/Home";
+import Menu from "../../pages/Menu";
+import Search from "../../pages/Search";
+import Downloads from "../../pages/Downloads";
 
 import { Icon } from "./styles";
 import { color } from "react-native-reanimated";
@@ -33,7 +36,7 @@ const SignedInBottomTab: React.FC = () => {
     >
       <Tab.Screen
         name="home"
-        component={Access}
+        component={Home}
         options={{
           title: "Início",
           tabBarIcon: ({ color, size }) => (
@@ -52,7 +55,7 @@ const SignedInBottomTab: React.FC = () => {
       />
       <Tab.Screen
         name="downloads"
-        component={Access}
+        component={Downloads}
         options={{
           title: "Downloads",
           tabBarIcon: ({ color, size }) => (
@@ -64,14 +67,14 @@ const SignedInBottomTab: React.FC = () => {
           ),
           tabBarLabel: ({ color }) => (
             <Text type="bold" size={8} color={color}>
-              Início
+              Downloads
             </Text>
           ),
         }}
       />
       <Tab.Screen
         name="search"
-        component={Access}
+        component={Search}
         options={{
           title: "Buscar",
           tabBarIcon: ({ color, size }) => (
@@ -83,14 +86,14 @@ const SignedInBottomTab: React.FC = () => {
           ),
           tabBarLabel: ({ color }) => (
             <Text type="bold" size={8} color={color}>
-              Início
+              Buscar
             </Text>
           ),
         }}
       />
       <Tab.Screen
         name="menu"
-        component={Access}
+        component={Menu}
         options={{
           title: "Menu",
           tabBarIcon: ({ color, size }) => (
@@ -102,7 +105,7 @@ const SignedInBottomTab: React.FC = () => {
           ),
           tabBarLabel: ({ color }) => (
             <Text type="bold" size={8} color={color}>
-              Início
+              Menu
             </Text>
           ),
         }}

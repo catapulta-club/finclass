@@ -12,20 +12,8 @@ const SignInStack: React.FC = () => {
         header: () => null,
       }}
     >
-      <Stack.Screen
-        name="access"
-        component={Access}
-        options={{
-          header: () => null,
-        }}
-      />
-      <Stack.Screen
-        name="login"
-        component={Login}
-        options={{
-          header: () => null,
-        }}
-      />
+      <Stack.Screen name="access" component={Access} />
+      <Stack.Screen name="login" component={Login} />
     </Stack.Navigator>
   );
 };

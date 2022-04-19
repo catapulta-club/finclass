@@ -2,14 +2,14 @@ import styled from "styled-components/native";
 import { LinearGradient } from "expo-linear-gradient";
 
 export const BannerImageBackground = styled.ImageBackground`
-  height: 100%;
+  height: 50%;
   width: ${({ width }) => width}px;
   justify-content: flex-end;
   align-items: center;
 `;
 
 export const TextContainer = styled.View`
-  width: 80%auto;
+  width: 80%;
   padding: 0 20px;
   justify-content: center;
   align-items: center;
@@ -46,6 +46,7 @@ export const ButtonHeaderOutlined = styled.Pressable`
   flex: 1;
   border-color: ${({ theme }) => theme.colors.placeholder.onMain};
   border-radius: ${({ theme }) => theme.borders.radius.sm}px;
+  border-width: 0.5px;
 `;
 
 export const ButtonIcon = styled.Image`

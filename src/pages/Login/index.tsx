@@ -39,7 +39,6 @@ const Login: React.FC = () => {
   const onSubmit = async () => {
     await handleSubmit(({ email, password }) => {
       login();
-      console.log(email, password);
     })();
   };
 

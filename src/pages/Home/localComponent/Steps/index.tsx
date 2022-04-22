@@ -9,8 +9,8 @@ const Steps = ({ index }: Props) => {
   return (
     <Container>
       <Step isActive={index === 0}></Step>
-      <Step isActive></Step>
-      <Step isActive></Step>
+      <Step isActive={index === 1}></Step>
+      <Step isActive={index === 2}></Step>
     </Container>
   );
 };

@@ -8,8 +8,8 @@ const Stack = createNativeStackNavigator();
 const SignInStack: React.FC = () => {
   return (
     <Stack.Navigator
-      defaultScreenOptions={{
-        header: () => null,
+      screenOptions={{
+        headerShown: false,
       }}
     >
       <Stack.Screen name="access" component={Access} />

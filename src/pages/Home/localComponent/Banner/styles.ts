@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 import { LinearGradient } from "expo-linear-gradient";
 
 export const BannerImageBackground = styled.ImageBackground`
-  height: 50%;
+  height: 100%;
   width: ${({ width }) => width}px;
   justify-content: flex-end;
   align-items: center;

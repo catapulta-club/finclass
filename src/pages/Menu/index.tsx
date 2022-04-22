@@ -35,12 +35,12 @@ const Menu: React.FC = () => {
         <ProfileContainer>
           <Avatar
             source={{
-              uri: "https://avatars.githubusercontent.com/u/28990749?v=4",
+              uri: "https://avatars.githubusercontent.com/u/95556375?v=4",
             }}
           />
           <Separator height={20} />
           <Text size={22} type="bold">
-            Ismael
+            João Victor
           </Text>
           <Separator height={40} />
           <Text size={12} type="bold" color={colors.placeholder.main}>

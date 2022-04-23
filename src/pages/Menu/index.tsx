@@ -103,7 +103,7 @@ const Menu: React.FC = () => {
           icon={<IconTile source={termsIcon} />}
         />
         <Separator height={30} />
-        <Button textType="bold" outlined title="Sair" onPress={logout} />
+        <Button textType="bold" title="Sair" onPress={logout} />
         <Separator height={30} />
         <Text size={11} type="bold" color={colors.placeholder.main}>
           Finclass 1.3.0

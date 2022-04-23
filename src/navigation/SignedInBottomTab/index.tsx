@@ -13,7 +13,6 @@ import Search from "../../pages/Search";
 import Downloads from "../../pages/Downloads";
 
 import { Icon } from "./styles";
-import { color } from "react-native-reanimated";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +25,7 @@ const SignedInBottomTab: React.FC = () => {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: colors.background.onMain,
-        tabBarInactiveTintColor: colors.background.main,
+        tabBarInactiveTintColor: colors.placeholder.main,
         tabBarStyle: {
           backgroundColor: colors.backdrop.main,
           borderTopColor: colors.backdrop.main,

@@ -21,6 +21,7 @@ import {
 const Login: React.FC = () => {
   const navigation = useNavigation();
   const { login } = useAuth();
+
   const {
     control,
     handleSubmit,
@@ -74,7 +75,7 @@ const Login: React.FC = () => {
                 onChangeText={(text) => setValue("email", text)}
                 onBlur={onBlur}
                 value={value}
-                error={errors?.email?.message}
+                error={errors.email?.message}
               />
             );
           }}
@@ -95,12 +96,12 @@ const Login: React.FC = () => {
                 onChangeText={(text) => setValue("password", text)}
                 onBlur={onBlur}
                 value={value}
-                error={errors?.password?.message}
+                error={errors.password?.message}
               />
             );
           }}
         />
-        <Separator height={55} />
+        <Separator height={70} />
         <Button title="Entrar" onPress={onSubmit} textType="semiBold" />
       </Content>
     </Container>

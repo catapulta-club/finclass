@@ -37,7 +37,7 @@ const Button = ({
         </>
       )}
 
-      <Title color="{titleColor}" type={textType}>
+      <Title color={titleColor} type={textType}>
         {title}
       </Title>
     </Container>

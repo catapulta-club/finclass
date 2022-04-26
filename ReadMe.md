@@ -3,11 +3,9 @@
 <h2> Imersão React Native na Veia!!!</h2>
   <p>Este é um clone do app Finclass original, com o objetivo de se aprofundar nas funcionalidades que as tecnologias atuais proporcionam. </p>
 
-<<<<<<< Updated upstream:ReadMe.md
+
   <img src='.assets/video/finvideo.gif'>
-=======
-  <img src='./assets/videos/finvideo.gif'>
->>>>>>> Stashed changes:README.md
+
 
 <h2>Tecnologias Utilizadas
  <p ><img height='100'  src='https://pagepro.co/blog/wp-content/uploads/2020/03/react-native-logo-884x1024.png'>

@@ -4,7 +4,9 @@
   <p>Este é um clone do app Finclass original, com o objetivo de se aprofundar nas funcionalidades que as tecnologias atuais proporcionam. </p>
 
 
-  <img src='.assets/video/finvideo.gif'>
+
+<h2>Demonstração</h2>
+
 
 
 <h2>Tecnologias Utilizadas
